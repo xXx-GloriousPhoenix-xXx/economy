@@ -1,0 +1,15 @@
+﻿using System.Text.Json.Serialization;
+
+namespace Weather.Services;
+
+public class WeatherApiResponse
+{
+    [JsonPropertyName("latitude")]
+    public double Latitude { get; set; }
+
+    [JsonPropertyName("longitude")]
+    public double Longitude { get; set; }
+
+    [JsonPropertyName("current")]
+    public CurrentWeather? Current { get; set; }
+}
